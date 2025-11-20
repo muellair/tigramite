@@ -89,9 +89,18 @@ Tigramite is a causal inference for time series python package. It allows to eff
 
 ## Installation
 
-python setup.py install
 
-This will install tigramite in your path.
+```
+python3 -m venv .venv
+. .venv/bin/activate
+pip install setuptools
+pip install "numpy>=1.18"
+pip install "scipy>=1.10.0"
+python setup.py install
+pip install .[all]
+```
+
+This will install tigramite with all extras, except pytorch, in your path. Install pytorch manually.
 
 To use just the ParCorr, CMIknn, and CMIsymb independence tests, only numpy/numba and scipy are required. For other independence tests more packages are required:
 
